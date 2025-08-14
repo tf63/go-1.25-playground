@@ -1,13 +1,13 @@
 {
   "files.insertFinalNewline": true,
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {},
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
-  "go.lintTool": "golangci-lint-v2",
+  "go.lintTool": "golangci-lint",
   "go.lintFlags": ["--path-mode=abs", "--fast-only"],
   "go.lintOnSave": "file",
   "go.formatTool": "custom",
