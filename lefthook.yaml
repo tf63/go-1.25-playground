@@ -1,11 +1,31 @@
 pre-commit:
   piped: true
   commands:
-    golang-ci-lint:
+    # golang-ci-lint:
+    #   priority: 1
+    #   glob: "*.go"
+    #   run: |
+    #     golangci-lint run {staged_files} --fix --fast-only
+    #   stage_fixed: true
+    #   skip:
+    #     - merge
+    #     - rebase
+
+    golang-ci-lint-module1:
       priority: 1
       glob: "*.go"
       run: |
-        golangci-lint run {staged_files} --fix --fast-only
+        golangci-lint run modules/module1/... --fix --fast-only
+      stage_fixed: true
+      skip:
+        - merge
+        - rebase
+
+    golang-ci-lint-module2:
+      priority: 1
+      glob: "*.go"
+      run: |
+        golangci-lint run modules/module2/... --fix --fast-only
       stage_fixed: true
       skip:
         - merge
